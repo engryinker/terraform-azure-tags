@@ -8,7 +8,7 @@ This module has no dependency on Azure Verified Modules (AVM doesn't ship a tagg
 
 ```hcl
 module "tags" {
-  source  = "git::https://github.com/<org>/terraform-azure-tags.git?ref=v1.0.0"
+  source  = "git::https://github.com/engryinker/terraform-azure-tags.git?ref=v1.0.0"
 
   environment = "prod"
   owner       = "platform-team@contoso.com"
@@ -27,7 +27,7 @@ resource "azurerm_resource_group" "this" {
 }
 ```
 
-Compose with [`terraform-azure-naming`](https://github.com/<org>/terraform-azure-naming) and pass `module.tags.tags` into any of [`terraform-azure-network`](https://github.com/<org>/terraform-azure-network), [`terraform-azure-compute`](https://github.com/<org>/terraform-azure-compute) or [`terraform-azure-storage`](https://github.com/<org>/terraform-azure-storage) via their `tags` input.
+Compose with [`terraform-azure-naming`](https://github.com/engryinker/terraform-azure-naming) and pass `module.tags.tags` into any of [`terraform-azure-network`](https://github.com/engryinker/terraform-azure-network), [`terraform-azure-compute`](https://github.com/engryinker/terraform-azure-compute) or [`terraform-azure-storage`](https://github.com/engryinker/terraform-azure-storage) via their `tags` input.
 
 See [`examples/basic`](examples/basic) for a runnable example.
 
